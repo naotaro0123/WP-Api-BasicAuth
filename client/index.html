@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WordPress Rest API Sample</title>
+    <script src="//cdn.jsdelivr.net/npm/vue"></script>
+    <script src="//unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
+</head>
+<body>
+
+    <article>
+        <h3>記事一覧の最新5件</h3>
+        <div id="articleList">
+            <!-- japanese:falseで英語表示 / articlenum:表示する記事数 / articlepage:ページ番号 -->
+            <article-list :japanese="true" :articlenum="5" :articlepage="1" />
+        </div>
+    </article>
+
+    <article>
+        <h3>記事一覧ページャー用（1ページ2件表示 && 2ページ目表示）</h3>
+        <div id="articleListPager">
+            <article-list :japanese="true" :articlenum="2" :articlepage="2" />
+        </div>
+    </article>
+
+    <article>
+        <h3>記事詳細</h3>
+        <div id="articleDetail">
+            <!-- japanese:falseで英語表示 / articleno:表示する記事ID -->
+            <article-detail :japanese="true" :articleno="33" />
+        </div>
+    </article>
+
+    <script src="scripts/components/cms-api.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
