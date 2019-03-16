@@ -1,4 +1,4 @@
-# WP-Api_BasicAuth
+# WP-Api-BasicAuth
 
 Basic認証のかかったWordPress配下にアクセスし、WordPress APIからVue.jsで表示するサンプルです。
 
